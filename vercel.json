@@ -1,9 +1,21 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": true,
   "redirects": [
     {
       "source": "/",
-      "destination": "/quiz",
+      "destination": "/quiz/",
       "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/quiz/:path*",
+      "destination": "/quiz/:path*"
+    },
+    {
+      "source": "/loja/:path*",
+      "destination": "/loja/:path*"
     }
   ]
 }
