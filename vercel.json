@@ -16,6 +16,10 @@
     {
       "source": "/loja/:path*",
       "destination": "/loja/:path*"
+    },
+    {
+      "source": "/back/:path*",
+      "destination": "/back/:path*"
     }
   ]
 }
