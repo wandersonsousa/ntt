@@ -36,27 +36,28 @@ body {
     margin: 20px 0px;
 }
 
-.valor-desconto{
-   display: flex;
-   justify-content:end;
-   color: red;
-  
+.valor-desconto {
+    display: flex;
+    justify-content: end;
+    color: red;
+
 }
 
-.valor-total{
+.valor-total {
     display: flex;
-    justify-content:end;
+    justify-content: end;
     color: green;
 }
 
-.valor-total p{
+.valor-total p {
     font-weight: bold;
     margin: 0px;
 }
 
-.valor-desconto p{
+.valor-desconto p {
     font-weight: bold;
 }
+
 .titllee {
     font-size: 16px;
     display: flex;
@@ -80,13 +81,14 @@ body {
     position: relative;
     bottom: 500px;
     margin: 20px;
-  
+
 }
 
-.dica-p  {
+.dica-p {
     font-weight: 400;
 }
-.dica-errado{
+
+.dica-errado {
     font-weight: 800;
 }
 
@@ -103,7 +105,7 @@ body {
     position: relative;
     bottom: 400px;
     margin: 20px;
-  
+
 }
 
 .selecione-resposta-p {
@@ -167,7 +169,7 @@ p {
 }
 
 .btn {
-    background-color:#da0029;
+    background-color: #da0029;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -186,8 +188,7 @@ p {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #000000
-    ;
+    border: 1px solid #000000;
     background-color: #f1f1f1;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -229,12 +230,78 @@ p {
     /* Suaviza a transição */
 }
 
-.btn-resgate{
-    
+.btn-resgate {
+
     text-decoration: none;
 }
 
-.p-resgate{
+.p-resgate {
     margin-bottom: 30px;
-    
+
 }
+
+/* --- CHRISTMAS THEME START --- */
+
+/* Snowflake Animation */
+.snowflake {
+    position: absolute;
+    top: -20px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Santa Hat on Logo */
+.header {
+    position: relative;
+    /* Ensure we can position relative to header */
+}
+
+.header img {
+    position: relative;
+    /* For z-index context */
+    z-index: 10;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    /* Adjust relative to logo */
+    left: 50%;
+    transform: translateX(-30px) rotate(-15deg);
+    /* Position on the "F" or near start */
+    width: 60px;
+    height: 60px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/744/744546.png');
+    /* Simple Santa Hat Icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* Festive Buttons */
+.btn {
+    border: 2px solid white;
+    /* Snow border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.5);
+    /* Glowing effect */
+}
+
+/* Content Container Festive Border */
+.content {
+    border: 2px dashed #0f5132;
+    /* Green Christmas dash */
+    padding: 18px;
+    /* Slight adjustment */
+}
+
+/* --- CHRISTMAS THEME END --- */
