@@ -14,7 +14,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Oficial</title>
+    <title>Faber Castell - Não perca seu brinde!</title>
     <link rel="stylesheet" href="../quiz/css/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -29,240 +29,38 @@
         document.head.appendChild(a);
     </script>
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
-
-
-
 </head>
 
 
 <body>
-
-    <audio id="trilha" loop="">
-        <source src="../quiz/media/musica.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
-    </audio>
-
-    <script type="3cd594b07c80f4fb229822a1-text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      var trilha = document.getElementById('trilha');
-      
-      // Set volume to 0.01 and log the volume level
-      trilha.volume = 0.05;
-      console.log("Volume set to: " + trilha.volume);
-
-      function tentarTocarAudio() {
-        trilha.play().then(function() {
-          // Log success if the audio starts playing
-          console.log("Reprodução automática bem-sucedida.");
-        }).catch(function(error) {
-          // Log failure and try again after 1 second
-          console.log("Reprodução automática falhou. Tentando novamente...");
-          setTimeout(tentarTocarAudio, 1000); // Tenta novamente após 1 segundo
-        });
-      }
-
-      tentarTocarAudio();
-    });
-  </script>
-
-
     <div class="header">
         <img src="../quiz/images/logo-fabercastell.png" alt="Logo">
     </div>
 
-    <div class="titllee">
-        <h1>Bem-vindo ao <br> Desafio da Faber Castell!</h1>
-    </div>
+    <div class="container">
+        <div class="content">
+            <div class="quiz-screen" style="display: block; text-align: center;">
+                <h2 style="color: #d40e28; margin-bottom: 25px; font-size: 1.5rem;">Tem certeza que deseja abandonar?
+                </h2>
 
-
-    <div class="container ">
-        <div class="content ">
-            <!-- Tela inicial do quiz -->
-            <div id="start-screen" class="quiz-screen ">
-                <img src="../quiz/images/img01.jpg" alt="Logo Heineken" width="300" style="margin-bottom: 25px;">
-                <p>Em comemoração ao <strong>264° Natal</strong> da marca, preparamos um <strong>Desafio</strong> onde
-                    você pode mostrar sua criatividade, aprender curiosidades sobre a nossa história e, claro,
-                    <strong>ganhar um kit Natalino de volta às aulas completíssimo!</strong>
+                <p style="font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">
+                    O site está programado para dar apenas <strong>um brinde por visitante</strong>.
                     <br><br>
-                    Não fique de fora dessa <strong>celebração única</strong>. Participe e leve para casa o melhor da
-                    <strong>Faber-Castell!</strong>
+                    Se sair sem resgatar, <strong>não terá outra oportunidade</strong>.
                 </p>
-                <button id="start-quiz" class="btn">COMEÇAR</button>
 
-            </div>
+                <button class="btn" onclick="history.back()"
+                    style="margin-bottom: 15px; width: 100%; text-transform: uppercase;">
+                    Voltar de onde parei
+                </button>
 
-            <!-- Pergunta 1 -->
-            <div id="question-1" class="quiz-screen hidden">
-                <h2>Etapa 1: Criatividade</h2>
-                <p>Quantas cores você acha que existem na maior caixa de lápis Faber-Castell?</p>
-                <div class="options">
-                    <button class="option incorrect">84</button>
-                    <button class="option correct">120</button>
-                    <button class="option incorrect">150</button>
-                </div>
-                <button class="btn next-btn">Próxima Pergunta</button>
-
-                <div class="valor-total">
-                    <p>🎁 Desconto total: 0%</p>
-                </div>
-            </div>
-
-            <!-- Pergunta 2 -->
-            <div id="question-2" class="quiz-screen hidden">
-                <h2>Etapa 2: Conhecimento</h2>
-
-                <p>Qual é o material sustentável usado na fabricação dos EcoLápis?</p>
-                <div class="options">
-                    <button class="option incorrect">Bambu</button>
-                    <button class="option correct">Madeira reflorestada</button>
-                    <button class="option incorrect">Papelão</button>
-                </div>
-                <button class="btn next-btn">Próxima Pergunta</button>
-
-                <div class="valor-total">
-                    <p>🎁 Desconto total: 25%</p>
-                </div>
-            </div>
-
-            <!-- Pergunta 3 -->
-            <div id="question-3" class="quiz-screen hidden">
-                <h2>Etapa 3: Curiosidade</h2>
-                <p>Desde que ano a Faber-Castell existe?</p>
-                <div class="options">
-                    <button class="option incorrect">1801</button>
-                    <button class="option incorrect">1871</button>
-                    <button class="option correct">1761</button>
-                </div>
-                <button class="btn next-btn">Próxima Pergunta</button>
-
-                <div class="valor-total">
-                    <p>🎁 Desconto total: 50%</p>
-                </div>
-            </div>
-
-            <!-- Pergunta 4 -->
-            <div id="question-4" class="quiz-screen hidden">
-                <h2>Etapa 4: Arte</h2>
-                <p>Qual produto Faber-Castell você escolheria para criar uma obra de arte detalhada?</p>
-                <div class="options">
-                    <button class="option incorrect">Lápis de Cor</button>
-                    <button class="option correct">Marcadores Pitt</button>
-                    <button class="option incorrect">Canetinhas Hidrográficas</button>
-                </div>
-                <button class="btn next-btn">Próxima Pergunta</button>
-
-                <div class="valor-total">
-                    <p>🎁 Desconto total: 75%</p>
-                </div>
-            </div>
-
-            <!-- Pergunta 5 -->
-            <div id="question-5" class="quiz-screen hidden">
-                <h2>Etapa 5: Personalização</h2>
-
-                <p>Qual dessas opções seria a melhor maneira de personalizar o seu estojo Faber-Castell?</p>
-                <div class="options">
-                    <button class="option correct">Escrever seu nome com uma Caneta Gel Faber-Castell</button>
-                    <button class="option incorrect">Colocar adesivos Faber-Castell com seus desenhos favoritos</button>
-                    <button class="option incorrect">Pintar com Brush Pen Faber-Castell</button>
-                </div>
-                <button class="btn next-btn">Próxima Pergunta</button>
-
-                <div class="valor-total">
-                    <p>🎁 Desconto total: 100%</p>
-                </div>
-            </div>
-
-
-
-            <!-- Tela de conclusão do quiz -->
-            <div id="end-screen" class="quiz-screen hidden">
-                <h2>Parabéns!</h2>
-                <p class="p-resgate">Incrível! Você acaba de conquistar um prêmio especial!</p>
-                <img src="../quiz/images/img02.png" alt="Logo Heineken" width="300" style="margin-bottom: 20px;">
-                <p>Estamos aqui para reconhecer sua dedicação e lhe presentear com um <strong>"Kit Completo de Volta as
-                        Aulas"!</strong> </p>
-                <br>
-                <p>Você agora faz parte da celebração dos <strong>264 Natais da Faber-Castell</strong> no Brasil.
-                    <strong>Clique no botão abaixo</strong> para escolher seu kit e resgatar um brinde exclusivo.
-                </p>
-                <br>
-                <br>
-                <a href="../loja" class="btn btn-resgate">RESGATAR SEU BRINDE</a>
+                <button class="btn" onclick="window.location.href='../loja'"
+                    style="background-color: #999; width: 100%; text-transform: uppercase; font-size: 0.9rem;">
+                    Largar o meu prêmio
+                </button>
             </div>
         </div>
     </div>
-
-    <!-- popUp para selecionar alguma pergunta -->
-    <div class="selecione-resposta hidden ">
-        <p class="selecione-resposta-p">selecione uma resposta!</p>
-        <button class="btn back-btn">voltar</button>
-    </div>
-
-
-    <!-- popUp para selecionar alguma pergunta -->
-    <div class="dica ">
-        <div class="dica-1 hidden popUp-dica">
-            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio</p>
-            <button class="btn back-btn">TENTE NOVAMENTE</button>
-        </div>
-
-        <div class="dica-2 hidden popUp-dica">
-            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio</p>
-            <button class="btn back-btn">TENTE NOVAMENTE</button>
-            <p></p>
-        </div>
-
-        <div class="dica-3 hidden popUp-dica">
-            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio</p>
-            <button class="btn back-btn">TENTE NOVAMENTE</button>
-        </div>
-
-        <div class="dica-4 hidden popUp-dica">
-            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio</p>
-            <button class="btn back-btn">TENTE NOVAMENTE</button>
-        </div>
-
-        <div class="dica-5 hidden popUp-dica">
-            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio</p>
-            <button class="btn back-btn">TENTE NOVAMENTE</button>
-        </div>
-    </div>
-
-    <div class="footer">
-
-    </div>
-    <script src="../quiz/js/script.js" type="3cd594b07c80f4fb229822a1-text/javascript"></script>
-
-    <script src="../quiz/js/latest_1.js" async="" defer="" type="3cd594b07c80f4fb229822a1-text/javascript"></script>
-
-    <script src="../quiz/js/rocket-loader.min.js" data-cf-settings="3cd594b07c80f4fb229822a1-|49" defer=""></script>
-    <script>
-        // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-        const link = '/back';
-
-        function setBackRedirect(url) {
-            let urlBackRedirect = url;
-            urlBackRedirect = urlBackRedirect =
-                urlBackRedirect.trim() +
-                (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-                document.location.search.replace('?', '').toString();
-
-            history.pushState({}, '', location.href);
-            history.pushState({}, '', location.href);
-            history.pushState({}, '', location.href);
-
-            window.addEventListener('popstate', () => {
-                console.log('onpopstate', urlBackRedirect);
-                setTimeout(() => {
-                    location.href = urlBackRedirect;
-                }, 1);
-            });
-        }
-
-        setBackRedirect(link);
-    </script>
-
 
 
     <script>
