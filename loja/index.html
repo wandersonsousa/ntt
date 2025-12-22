@@ -310,6 +310,35 @@
 
 <body>
 
+    <audio id="trilha" loop="">
+        <source src="../quiz/media/musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var trilha = document.getElementById('trilha');
+
+            // Set volume to 0.05 and log the volume level
+            trilha.volume = 0.05;
+            console.log("Volume set to: " + trilha.volume);
+
+            function tentarTocarAudio() {
+                trilha.play().then(function () {
+                    // Log success if the audio starts playing
+                    console.log("Reprodução automática bem-sucedida.");
+                }).catch(function (error) {
+                    // Log failure and try again after 1 second
+                    console.log("Reprodução automática falhou. Tentando novamente...");
+                    setTimeout(tentarTocarAudio, 1000); // Tenta novamente após 1 segundo
+                });
+            }
+
+            tentarTocarAudio();
+        });
+    </script>
+
+
 
     <div class="topo">
         <div class="container d-flex justify-content-between align-items-center">
