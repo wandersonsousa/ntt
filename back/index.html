@@ -71,7 +71,7 @@
                     Se sair sem resgatar, <strong>não terá outra oportunidade</strong>.
                 </p>
 
-                <button class="btn" onclick="history.back()"
+                <button class="btn" id="btn-voltar" onclick="history.back()"
                     style="margin-bottom: 15px; width: 100%; text-transform: uppercase;">
                     Voltar de onde parei
                 </button>
@@ -90,6 +90,21 @@
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const origin = urlParams.get('origin');
+            if (origin === 'loja') {
+                const btnVoltar = document.getElementById('btn-voltar');
+                if (btnVoltar) {
+                    btnVoltar.onclick = function (e) {
+                        e.preventDefault();
+                        window.location.href = '../loja';
+                    };
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
