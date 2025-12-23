@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quizScreens.forEach((screen, i) => {
             screen.classList.toggle("hidden", i !== index);
         });
+        localStorage.setItem("quiz_current_question", index);
     }
 
     // Evento para iniciar o quiz
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Eventos para os botões "Próxima Pergunta"
     nextButtons.forEach((button) => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const options = button.closest(".quiz-screen").querySelectorAll(".option");
             const selectedOption = Array.from(options).find(option => option.classList.contains("selected"));
             const optionSelected = selectedOption !== undefined;
@@ -81,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Evento para o botão "Voltar" no pop-up de aviso
     backButton.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             selecioneResposta.classList.add('hidden');
             container.classList.remove('opacity');
             dicas.forEach(dica => dica.classList.add("hidden"));
@@ -103,6 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
         container.classList.add('opacity');
     }
 
-    // Inicializa o quiz mostrando apenas a tela inicial
-    showScreen(0);
+    // Check local storage for saved progress
+    const savedIndex = localStorage.getItem("quiz_current_question");
+    if (savedIndex !== null) {
+        currentQuestionIndex = parseInt(savedIndex, 10);
+        showScreen(currentQuestionIndex);
+    } else {
+        // Inicializa o quiz mostrando apenas a tela inicial
+        showScreen(0);
+    }
+
 });
